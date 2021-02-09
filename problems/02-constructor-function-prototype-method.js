@@ -24,7 +24,7 @@ Node.js with the examples below. Use the command:
 
 Examples:
 
-const message1 = new Email('sally@smith.com', 'john@smith.com', 
+const message1 = new Email('sally@smith.com', 'john@smith.com',
   'Test Message One', 'This is a test message.');
 console.log(message1);
 console.log(message1.getSubjectAndText());
@@ -39,7 +39,7 @@ console.log(message1.getSubjectAndText());
 // }
 // Test Message One: This is a test message.
 
-const message2 = new Email('sally@smith.com', 'john@smith.com', 
+const message2 = new Email('sally@smith.com', 'john@smith.com',
   'Test Message Two', 'This is a test message.');
 console.log(message2);
 console.log(message2.getSubjectAndText());
@@ -55,8 +55,51 @@ console.log(message2.getSubjectAndText());
 // Test Message Two: This is a test message.
 
 ***********************************************************************/
+function Email (recipient, sender, subject, text) {
+  this.recipient = recipient;
+  this.sender = sender;
+  this.subject = subject;
+  this. text = text;
+  getSubjectAndText = function (subject, text) {
+    return `${this.subject}: ${this.text}`;
+  }
+}
 
+// Email.prototype.getSubjectAndText = function (subject, text) {
+//   return `${this.subject} : ${this.text}`;
+// }
 
+// Examples:
+
+const message1 = new Email('sally@smith.com', 'john@smith.com',
+  'Test Message One', 'This is a test message.');
+console.log(message1);
+console.log(message1.getSubjectAndText());
+
+// Should print...
+
+// Email {
+//   recipient: 'sally@smith.com',
+//   sender: 'john@smith.com',
+//   subject: 'Test Message One',
+//   text: 'This is a test message.'
+// }
+// Test Message One: This is a test message.
+
+const message2 = new Email('sally@smith.com', 'john@smith.com',
+  'Test Message Two', 'This is a test message.');
+console.log(message2);
+console.log(message2.getSubjectAndText());
+
+// Should print...
+
+// Email {
+//   recipient: 'sally@smith.com',
+//   sender: 'john@smith.com',
+//   subject: 'Test Message Two',
+//   text: 'This is a test message.'
+// }
+// Test Message Two: This is a test message.
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
