@@ -60,14 +60,14 @@ function Email (recipient, sender, subject, text) {
   this.sender = sender;
   this.subject = subject;
   this. text = text;
-  getSubjectAndText = function (subject, text) {
-    return `${this.subject}: ${this.text}`;
-  }
+//   this.getSubjectAndText = function () {
+//     return `${this.subject}: ${this.text}`;
+//   }
 }
 
-// Email.prototype.getSubjectAndText = function (subject, text) {
-//   return `${this.subject} : ${this.text}`;
-// }
+Email.prototype.getSubjectAndText = function (subject, text) {
+  return `${this.subject}: ${this.text}`;
+}
 
 // Examples:
 
