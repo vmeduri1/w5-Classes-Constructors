@@ -62,40 +62,41 @@ class Email {
         this.subject = subject;
         this. text = text;
     }
-    getSubjectAndText = function (){
-        return `${this.subject}: ${this.text}`;
-    }
-  }
+}
 
-  const message1 = new Email('sally@smith.com', 'john@smith.com',
-  'Test Message One', 'This is a test message.');
-console.log(message1);
-console.log(message1.getSubjectAndText());
+Email.prototype.getSubjectAndText = function () {
+  return `${this.subject}: ${this.text}`;
+}
 
-// Should print...
+//   const message1 = new Email('sally@smith.com', 'john@smith.com',
+//   'Test Message One', 'This is a test message.');
+// console.log(message1);
+// console.log(message1.getSubjectAndText());
 
-// Email {
-//   recipient: 'sally@smith.com',
-//   sender: 'john@smith.com',
-//   subject: 'Test Message One',
-//   text: 'This is a test message.'
-// }
-// Test Message One: This is a test message.
+// // Should print...
 
-const message2 = new Email('sally@smith.com', 'john@smith.com',
-  'Test Message Two', 'This is a test message.');
-console.log(message2);
-console.log(message2.getSubjectAndText());
+// // Email {
+// //   recipient: 'sally@smith.com',
+// //   sender: 'john@smith.com',
+// //   subject: 'Test Message One',
+// //   text: 'This is a test message.'
+// // }
+// // Test Message One: This is a test message.
 
-// Should print...
+// const message2 = new Email('sally@smith.com', 'john@smith.com',
+//   'Test Message Two', 'This is a test message.');
+// console.log(message2);
+// console.log(message2.getSubjectAndText());
 
-// Email {
-//   recipient: 'sally@smith.com',
-//   sender: 'john@smith.com',
-//   subject: 'Test Message Two',
-//   text: 'This is a test message.'
-// }
-// Test Message Two: This is a test message.
+// // Should print...
+
+// // Email {
+// //   recipient: 'sally@smith.com',
+// //   sender: 'john@smith.com',
+// //   subject: 'Test Message Two',
+// //   text: 'This is a test message.'
+// // }
+// // Test Message Two: This is a test message.
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
